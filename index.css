@@ -1,0 +1,146 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(28, 108, 108);
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    width: 30%;
+    height: 80%;
+}
+
+h1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    font-style: italic;
+    color: burlywood;
+    margin-top: -8rem;
+    margin-left: 7rem;
+}
+
+.turn{
+    border:  rgba(225, 225,225,0.25) solid;
+    border-radius: 1rem;
+    background-color: rgba(225, 225,225,0.25);
+    height: 2rem;
+    width: 20rem;
+    margin-top: -4rem;
+    margin-left: 2rem;  
+    margin-bottom: 3rem;
+    text-align: center;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    position: relative;
+    justify-content: center;
+    font-size: large;
+}
+
+
+.cells{
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(225, 225,225,0.15) ;
+    border-radius: 1rem;
+    border: solid rgba(225, 225,225,0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+
+}
+
+.cell{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    color: white;
+    height: 100%;
+}
+
+
+.box1, .box2, .box4, .box5{
+     border-right: 3px solid white;
+     border-bottom: 3px solid white;
+     
+}
+
+.box3, .box6{
+    border-bottom: 3px solid white;
+}
+
+.box7 , .box8{
+    border-right: 3px solid white;
+}
+
+/* new game section */
+.startbtn{
+    margin-top: 3rem;
+    background-color: rgba(225, 225,225,0.15);
+    font-weight: bold;
+    border:solid rgb(255, 179, 0);
+    border-radius: 1rem;
+    width: 10rem;
+    margin-left: 7rem;  
+    margin-bottom: 5rem;
+    text-align: center;
+    padding-left: 1.7rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    cursor: pointer;
+    display: none;
+}
+
+.startbtn{
+    transition-property: background-color;
+    transition-duration: 0.s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.2s;
+    }
+
+.startbtn:hover{
+    background-color: rgba(159, 158, 158, 0.717);
+    
+}
+
+.startbtn.active{
+    display: flex;
+}
+
+.win{
+   background-color: green;
+   z-index: -1;
+}
+
+/* Example media query for smaller screens (tablets) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+    }
+    /* Adjust other styles as needed */
+}
+
+.foot{
+    max-width: 100vh;
+    height: 20px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    margin-left: 6rem;
+}
